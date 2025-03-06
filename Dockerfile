@@ -1,5 +1,5 @@
-FROM node
-WORKDIR /usr/src/app
+FROM ubuntu
+RUN apt update && apt install -y nodejs
 COPY . .
 RUN npm install
 EXPOSE 3000
