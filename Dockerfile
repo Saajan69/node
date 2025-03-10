@@ -1,6 +1,6 @@
 FROM ubuntu:24.10
 
-RUN apt update -y --no-install-recommends curl ca-certificates
+RUN apt update && apt install -y --no-install-recommends curl ca-certificates
 RUN curl https://deb.nodesource.com/setup_20.x | bash
 RUN apt install -y --no-install-recommends nodejs
 RUN apt clean && rm -rf /var/lib/apt/lists/*
